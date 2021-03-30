@@ -1,0 +1,29 @@
+service: enviocorreo
+
+plugins:
+  - serverless-offline
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+
+  environment:
+    variable1: value1
+
+functions:
+  sendEmail:
+    handler: handler.sendEmail
+    name: sendEmail
+    events:
+    - http:
+        path: email/send
+        method: get
+        cors: true
+
+resources:
+  Resources:
+    ApiGatewayRestApi:
+      Type: "AWS::ApiGateway::RestApi"
+      Properties:
+        Name: "usecomdesaapitrk001"

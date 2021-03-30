@@ -1,0 +1,19 @@
+{
+  "name": "enviocorreo",
+  "version": "1.0.0",
+  "description": "enviar correos",
+  "main": "handler.js",
+  "scripts": {
+    "start": "sls offline start",
+    "test": "sls offline"
+  },
+  "author": "junior",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "serverless": "^2.31.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.9.0"
+  }
+}
